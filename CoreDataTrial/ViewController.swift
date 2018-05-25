@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         entity.name = "alpha"
         entity.age = 20
         print(try! moc.fetch(NSFetchRequest<Person>(entityName: "Person")))
+        try! moc.save()
         print(try! moc2.fetch(NSFetchRequest<Person>(entityName: "Person")))
         // Do any additional setup after loading the view, typically from a nib.
     }
